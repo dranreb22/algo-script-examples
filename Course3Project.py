@@ -75,7 +75,7 @@ def main():
                       palette='pastel')
     ax.set_xticks(range(0, 21, 1))
     ax.set_xticklabels(range(0, 21, 1))
-    plt.title('Tip amount by vendor histogram');
+    plt.title('Tip amount by vendor histogram')
 
     # plt.show()
 
@@ -86,7 +86,7 @@ def main():
                       palette='pastel')
     ax.set_xticks(range(10, 21, 1))
     ax.set_xticklabels(range(10, 21, 1))
-    plt.title('Tip amount by vendor histogram');
+    plt.title('Tip amount by vendor histogram')
 
     # plt.show()
 
@@ -104,7 +104,7 @@ def main():
                      palette=np.array(pal[::-1])[rank])
     ax.axhline(df['tip_amount'].mean(), ls='--', color='red', label='global mean')
     ax.legend()
-    plt.title('Mean tip amount by passenger count', fontsize=16);
+    plt.title('Mean tip amount by passenger count', fontsize=16)
     # print(mean_tips_by_passenger_count.head())
     # plt.show()
 
@@ -120,7 +120,7 @@ def main():
     plt.figure(figsize=(12, 7))
     ax = sns.barplot(x=monthly_rides.index, y=monthly_rides)
     ax.set_xticklabels(month_order)
-    plt.title('Ride count by month', fontsize=16);
+    plt.title('Ride count by month', fontsize=16)
 
     # plt.show()
 
@@ -152,13 +152,9 @@ def main():
     ax.set_xticks([])
     ax.set_xlabel('Endpoint')
     ax.set_ylabel('Mean distance to all other points')
-    ax.set_title('Mean distance between points taken randomly from normal distribution');
+    ax.set_title('Mean distance between points taken randomly from normal distribution')
 
     plt.show()
-
-
-
-
 
 
 main()
