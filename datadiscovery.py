@@ -4,17 +4,17 @@ import matplotlib.pyplot as plt
 
 def main():
     df = pd.read_csv('modified_unicorn_companies.csv')
-    print(df.head(10))
-    df.info()
+    #print(df.head(10))
+    #df.info()
     print(df.describe())
-    print(df.size)
-    print(df.shape)
+    #print(df.size)
+    #print(df.shape)
 
     df['Date Joined'] = pd.to_datetime(df['Date Joined'])
-    df.info()
+    #df.info()
 
     df['Year Joined'] = df['Date Joined'].dt.year
-    print(df.head())
+    #print(df.head())
 
     df_sample = df.sample(n=50, random_state=42)
 
@@ -22,7 +22,7 @@ def main():
 
     grouped = df_sample[["Industry", "years_till_unicorn"]].groupby('Industry').max().sort_values(
         by="years_till_unicorn")
-    print(grouped)
+    #print(grouped)
 
     plt.bar(grouped.index, grouped["years_till_unicorn"])
     plt.title("Bar plot of maximum years taken by company to become unicorn per industry (from sample)")
@@ -30,7 +30,7 @@ def main():
     plt.ylabel("Maximum number of years")
     plt.xticks(rotation=45, horizontalalignment='right')
     plt.subplots_adjust(bottom=0.45)
-    plt.show()
+    #plt.show()
 
 
 main()
