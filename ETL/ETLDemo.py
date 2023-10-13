@@ -12,7 +12,7 @@ def main():
     config = configparser.ConfigParser()
 
     try:
-        config.read('ETL.ini')
+        config.read('config.ini')
     except Exception as e:
         print('issue reading config: ' + str(e))
         sys.exit()
